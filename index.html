@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>HR Module Login Panel</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='style.css' rel='stylesheet'>
+
+    <style>
+       
+    </style>
+</head>
+
+<body>
+
+    <div class="container" onclick="onclick">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center">
+            <div class="main">
+                <!-- Employee login Form start  -->
+                <div class="container-forms a-container" id="a-container">
+                    <form class="form" id="a-form" method="POST" action="">
+                        <h2 class="switch__title title" style="color:rgb(31, 31, 31);">Welcome To !</h2>
+
+                        <h2 class="form_title title">Employee Login Form</h2>
+                        <input class="form__input" type="text" name="email" placeholder="Email*" required>
+
+                        <input class="form__input" type="password" placeholder="Password" name="password" required>
+
+                        <button class="form__button button submit">EMPLOYEE LOGIN</button>
+                    </form>
+                </div>
+                <!-- Employee login Form end  -->
+                <!-- HR login Form start  -->
+                <div class="container-forms b-container" id="b-container">
+                    <form class="form" id="b-form" method="" action="">
+                        <h2 class="switch__title title" style="color:rgb(31, 31, 31);">Welcome To !</h2>
+                        <h2 class="form_title title">HR Login Form</h2>
+                        
+                        <input class="form__input" type="text" placeholder="Email*" required>
+                        <input class="form__input" type="password" placeholder="Password*" required>
+                        
+                        <button class="form__button button submit">HR LOGIN</button>
+                    </form>
+                </div>
+                <!-- HR login Form end -->
+
+                <div class="switch" id="switch-cnt">
+                    <div class="switch__circle"></div>
+                    <div class="switch__circle switch__circle--t"></div>
+                    <div class="switch__container" id="switch-c1">
+                        <h2 class="switch__title title" style="color:#ffffff;">HR Login</h2>
+                        <p class="switch__description description">Enter your details to login
+                        </p>
+                        <button class="switch__button button switch-btn">HR LOGIN</button>
+                    </div>
+
+                    <div class="switch__container is-hidden" id="switch-c2">
+                        <h2 class="switch__title title">Hello Friend !</h2>
+                        <p class="switch__description description">Enter Employee Details To Go To Emoloyee Dashboard
+                        </p>
+                        <button class="switch__button button switch-btn">EMPLOYEE LOGIN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="logo-main">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" class="logo img-fluid" alt="">
+        </a>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        let switchCtn = document.querySelector("#switch-cnt");
+        let switchC1 = document.querySelector("#switch-c1");
+        let switchC2 = document.querySelector("#switch-c2");
+        let switchCircle = document.querySelectorAll(".switch__circle");
+        let switchBtn = document.querySelectorAll(".switch-btn");
+        let aContainer = document.querySelector("#a-container");
+        let bContainer = document.querySelector("#b-container");
+        let allButtons = document.querySelectorAll(".submit");
+
+        let getButtons = (e) => e.preventDefault()
+
+        let changeForm = (e) => {
+
+            switchCtn.classList.add("is-gx");
+            setTimeout(function () {
+                switchCtn.classList.remove("is-gx");
+            }, 1500)
+
+            switchCtn.classList.toggle("is-txr");
+            switchCircle[0].classList.toggle("is-txr");
+            switchCircle[1].classList.toggle("is-txr");
+
+            switchC1.classList.toggle("is-hidden");
+            switchC2.classList.toggle("is-hidden");
+            aContainer.classList.toggle("is-txl");
+            bContainer.classList.toggle("is-txl");
+            bContainer.classList.toggle("is-z200");
+        }
+
+        let mainF = (e) => {
+            for (var i = 0; i < allButtons.length; i++)
+                allButtons[i].addEventListener("click", getButtons);
+            for (var i = 0; i < switchBtn.length; i++)
+                switchBtn[i].addEventListener("click", changeForm)
+        }
+
+        window.addEventListener("load", mainF);
+
+        const passwordInput = document.getElementById('passwordInput');
+        const passwordStrengthIndicator = document.getElementById('passwordStrengthIndicator');
+
+        passwordInput.addEventListener('input', function () {
+            const password = passwordInput.value;
+
+            if (password.length >= 8 && password.length <= 16) {
+                passwordStrengthIndicator.textContent = 'Strong password';
+                passwordStrengthIndicator.classList.remove('red');
+                passwordStrengthIndicator.classList.add('green');
+            } else {
+                passwordStrengthIndicator.textContent = 'Password should be 8 to 16 characters long';
+                passwordStrengthIndicator.classList.remove('green');
+                passwordStrengthIndicator.classList.add('red');
+            }
+        });
+
+
+    </script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>
